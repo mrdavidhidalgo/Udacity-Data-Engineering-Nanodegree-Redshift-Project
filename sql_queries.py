@@ -189,12 +189,12 @@ WHERE artist_id is not null;
 time_table_insert = ("""
 INSERT INTO time(start_time, hour, day, week, month, year, weekday)
 SELECT DISTINCT start_time,
-extract(year from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "year",
-extract(month from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "month",
-extract(week from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "week",
-extract(weekday from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "weekday",
+extract(hour from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "hour",
 extract(day from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "day",
-extract(hour from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "hour"
+extract(week from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "week",
+extract(month from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "month",
+extract(year from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "year",
+extract(weekday from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "weekday"
 FROM songplays
 WHERE start_time is not null;
 """)
