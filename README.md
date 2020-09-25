@@ -16,7 +16,7 @@ Easy way to read and put data into Redshift
 create_tables.py ->
 Delete and create the scripts for any table
 
-python etl.py ->
+etl.py ->
 Load the date into Redshift from S3
 
 
