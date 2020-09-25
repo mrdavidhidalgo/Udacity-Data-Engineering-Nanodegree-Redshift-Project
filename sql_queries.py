@@ -179,7 +179,7 @@ WHERE song_id is not null;
 
 artist_table_insert = ("""
 
-INSERT INTO artist(artist_id, name, location, latitude, longitude)
+INSERT INTO artists(artist_id, name, location, latitude, longitude)
 SELECT distinct artist_id, artist_name, artist_location, artist_longitude longitude,
 artist_latitude latitude
 FROM staging_song
