@@ -1,4 +1,4 @@
-##Data Warehouse Project
+## Data Warehouse Project
 
 This project is a implementation of Sparkify app, 
 from files stored in S3 to Amazon Redshift.
