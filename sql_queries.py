@@ -171,7 +171,7 @@ ORDER BY ts;
 """)
 
 song_table_insert = ("""
-INSERT INTO song(song_id, title, artist_id, year, duration)
+INSERT INTO songs(song_id, title, artist_id, year, duration)
 SELECT distinct song_id, title, artist_id, year, duration
 FROM staging_song
 WHERE song_id is not null;
