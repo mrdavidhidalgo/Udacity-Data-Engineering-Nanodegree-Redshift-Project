@@ -191,7 +191,7 @@ INSERT INTO time(start_time, hour, day, week, month, year, weekday)
 SELECT DISTINCT start_time,
 extract(year from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "year",
 extract(month from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "month",
-extract(hour from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "week",
+extract(week from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "week",
 extract(weekday from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "weekday",
 extract(day from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "day",
 extract(hour from timestamp 'epoch' + (start_time/1000 * interval '1 second')) as "hour"
